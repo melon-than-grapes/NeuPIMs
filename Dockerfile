@@ -7,7 +7,7 @@ RUN yum update -y && yum install -y python3 python3-pip git wget gcc gcc-c++ mak
 WORKDIR /workspace
 
 RUN wget https://github.com/Kitware/CMake/releases/download/v3.22.0/cmake-3.22.0.tar.gz
-RUN tar -xvzf cmake-3.22.0.tar.gz && cd cmake-3.22.0 && ./bootstrap && make -j && make install
+RUN tar -xvzf cmake-3.22.0.tar.gz && cd cmake-3.22.0 && ./bootstrap && make -j1 && make install
 RUN pip3 install conan==1.57.0
 
 RUN echo "Welcome to NeuPIMs Simulator!"
