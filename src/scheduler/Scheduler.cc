@@ -7,7 +7,7 @@
 
 Scheduler::Scheduler(SimulationConfig config, const cycle_type* core_cycle)
     : _config(config), _core_cycle(core_cycle), _cycles(0) {
-    _max_batch_size = 1024;   // 256;   // config.max_batch_size;
+    _max_batch_size = 256;   // 256;   // config.max_batch_size;
     _max_active_reqs = 1024;  // 256;  // 70;
     _active_reqs = 0;
     _next_ch = 0;
